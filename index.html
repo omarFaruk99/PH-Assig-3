@@ -22,13 +22,13 @@
                     // Extending the default color palette with custom colors
                     colors: {
                         clifford: '#da373d',
+                        'custom-green-50': 'rgba(171, 239, 95, 0.5)',
                         // Add more custom colors here
                     },
                     // Extending the default background images with custom images
                     backgroundImage: {
                         'hero-pattern': "url('/img/hero-pattern.svg')",
-                        'footer-texture': "url('/img/footer-texture.png')",
-                        'white-gradient': 'linear-gradient(to right, #FFFFFF 0%, #FFFFFF 100%)',
+                        'custom-gradient': 'linear-gradient(to right, rgba(255, 255, 255, .1), rgba(255, 255, 255, 1))',
                     },
                     // Adding custom fonts to the theme
                     fontFamily: {
@@ -50,12 +50,12 @@
 
 <body class="manrope-font">
     <!-- ................header................. -->
-    <header class="bg-white-gradient">
+    <header class="bg-custom-gradient">
         <!-- container -->
         <section class="container mx-auto">
             <!-- nav bar -->
             <nav>
-                <div class="navbar bg-base-100">
+                <div class="navbar">
                     <div class="navbar-start">
 
                         <div class="flex items-center justify-center gap-x-0">
@@ -77,8 +77,9 @@
                     <div class="navbar-end ">
                         <!-- dropdown bar -->
                         <div class="dropdown">
-                            <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
-                                <i class="fa-solid fa-bars"></i>
+                            <div tabindex="0" role="button" class="lg:hidden">
+                                <i
+                                    class="fa-solid fa-bars border border-gray-300 rounded-full p-2 w-10 h-10 flex items-center justify-center opacity-50 bg-white"></i>
                             </div>
                             <ul tabindex="0"
                                 class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow right-0 lg:right-auto lg:left-0">
@@ -110,6 +111,26 @@
                     </div>
                 </div>
             </nav>
+            <!-- banner -->
+            <div class="mt-14 flex flex-col items-center justify-center mb-72">
+                <div class="img mb-4 w-10/12 sm:w-auto ">
+                    <img src="./assets/banner.png" class="w-10/12 sm:w-auto" alt="">
+                </div>
+                <!-- banner context -->
+                <div class="flex flex-col items-center justify-center text-center space-y-4">
+                    <h2 class="font-extrabold lg:text-[64px] text-[28px] text-[#212121]">A barn house of this design has a striking appearance</h2>
+                    <p class="font-medium lg:text-base text-[13px] text-[#494949]">The barn house captivates with its blend of rustic charm and modern sophistication, featuring
+                        weathered wood, sleek metal accents, and large windows that flood the space with natural light.
+                    </p>
+                    <div class="w-11/12 sm:w-auto">
+                        <button class="bg-custom-green-50 rounded-full py-3 px-6 flex items-center justify-center border border-[#ABEF5F] w-11/12 sm:w-auto">
+                            <a class="text-xl font-bold">View Details</a>
+                            <i
+                                class="fa-solid fa-arrow-right -rotate-45 bg-[#ABEF5F] rounded-full p-3 text-black w-8 h-8 text-xl font-bold flex items-center justify-center ml-2"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
         </section>
 
     </header>
