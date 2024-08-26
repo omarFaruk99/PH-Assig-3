@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 
 <head>
     <meta charset="UTF-8">
@@ -8,6 +8,12 @@
     <!--  daisyUI CSS file + Tailwind CSS CDN script -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome CDN  -->
+    <script src="https://kit.fontawesome.com/59a120c215.js" crossorigin="anonymous"></script>
+    <!-- Manrope: Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
     <!-- Configure Tailwind CSS with Custom Settings -->
     <script>
         tailwind.config = {
@@ -15,29 +21,104 @@
                 extend: {
                     // Extending the default color palette with custom colors
                     colors: {
-                        clifford: '#da373d', 
+                        clifford: '#da373d',
                         // Add more custom colors here
                     },
                     // Extending the default background images with custom images
                     backgroundImage: {
-                        'hero-pattern': "url('/img/hero-pattern.svg')",  
-                        'footer-texture': "url('/img/footer-texture.png')",  // Custom background image for footer
+                        'hero-pattern': "url('/img/hero-pattern.svg')",
+                        'footer-texture': "url('/img/footer-texture.png')",
+                        'white-gradient': 'linear-gradient(to right, #FFFFFF 0%, #FFFFFF 100%)',
                     },
                     // Adding custom fonts to the theme
                     fontFamily: {
-                        Poppins: ['Poppins', 'sans-serif'],  
+                        Poppins: ['Poppins', 'sans-serif'],
                     },
                 },
             },
         }
     </script>
-    <!-- Font Awesome CDN  -->
-    <script src="https://kit.fontawesome.com/59a120c215.js" crossorigin="anonymous"></script>
+    <!-- google font css -->
+    <style>
+        .manrope-font {
+            font-family: "Manrope", sans-serif;
+        }
+    </style>
+
 
 </head>
 
-<body>
+<body class="manrope-font">
+    <!-- ................header................. -->
+    <header class="bg-white-gradient">
+        <!-- container -->
+        <section class="container mx-auto">
+            <!-- nav bar -->
+            <nav>
+                <div class="navbar bg-base-100">
+                    <div class="navbar-start">
 
+                        <div class="flex items-center justify-center gap-x-0">
+                            <i
+                                class="fa-solid fa-arrow-right -rotate-45 bg-[#ABEF5F] rounded-full p-2 w-10 h-10 flex items-center justify-center text-xl"></i>
+                            <a class="btn btn-ghost text-[32px] font-extrabold text-[#212121]">Rinterio</a>
+                        </div>
+                    </div>
+                    <div class="navbar-center hidden lg:flex">
+                        <ul class="menu menu-horizontal px-1 text-[#737373] font-normal text-base">
+                            <li class="hover:text-black"><a>Home</a></li>
+                            <li class="hover:text-black"><a>Services</a></li>
+                            <li class="hover:text-black"><a>Portfolio</a></li>
+                            <li class="hover:text-black"><a>Blogs</a></li>
+                            <li class="hover:text-black"><a>Contact Us</a></li>
+                        </ul>
+                    </div>
+                    <!-- nav bar end -->
+                    <div class="navbar-end ">
+                        <!-- dropdown bar -->
+                        <div class="dropdown">
+                            <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                                <i class="fa-solid fa-bars"></i>
+                            </div>
+                            <ul tabindex="0"
+                                class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow right-0 lg:right-auto lg:left-0">
+                                <li class="hover:text-black"><a>Home</a></li>
+                                <li class="hover:text-black"><a>Services</a></li>
+                                <li class="hover:text-black"><a>Portfolio</a></li>
+                                <li class="hover:text-black"><a>Blogs</a></li>
+                                <li class="hover:text-black"><a>Contact Us</a></li>
+                            </ul>
+                        </div>
+                        <!-- search icon, card, button & card for large screen -->
+                        <div class="space-x-3 lg:flex items-center justify-center hidden">
+                            <!-- search Icon -->
+                            <i
+                                class="fa-solid fa-magnifying-glass border border-gray-300 rounded-full p-2 w-10 h-10 flex items-center justify-center opacity-50 bg-white"></i>
+                            <!-- card Icon -->
+                            <i
+                                class="fa-solid fa-cart-shopping border border-gray-300 rounded-full p-2 w-10 h-10 flex items-center justify-center fill-slate-50 bg-white"></i>
+                            <!-- Button with arrow Icon -->
+                            <div class="flex items-center justify-center">
+                                <button class="btn bg-[#ABEF5F] rounded-full py-3 px-5">
+                                    <a>Book Consult</a>
+                                    <i
+                                        class="fa-solid fa-arrow-right -rotate-45 bg-black rounded-full p-2 text-white w-5 h-5 text-sm flex items-center justify-center"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </nav>
+        </section>
+
+    </header>
+    <!-- .................main................. -->
+    <main>
+
+    </main>
+    <!-- .................footer................ -->
+    <footer></footer>
 </body>
 
 </html>
